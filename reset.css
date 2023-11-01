@@ -1,0 +1,102 @@
+html, body, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q/*quotation.引用。*/, samp/*サンプル出力。エラー時などにコンピューターから出力される文など。*/,
+small, strong, sub, sup, var,
+b, i, 
+dl, dt, dd, ol, ul, li,
+fieldset/*labelっぽいもの*/, form, label, legend/*fieldsetの主題的なものを決める。*/,
+table, caption/*表のタイトルを決める*/, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas/*グラフィックやアニメーションの描画*/, details, figcaption/*図へのキャプション*/, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time/*時間に関係するデータ全般*/, mark/*マーカーをつける*/, audio/*埋め込み音声*/, video/*埋め込み動画*/{
+    margin:0;
+    /*margin...余白をどう設定するか。https://developer.mozilla.org/ja/docs/Web/CSS/margin*/
+    padding:0;
+    /*padding...コンテンツの周囲の余白の設定。https://developer.mozilla.org/ja/docs/Web/CSS/padding*/
+    border:0;
+    /*border...境界線の設定。https://developer.mozilla.org/ja/docs/Web/CSS/border*/
+    outline:0;
+    /*outline...輪郭線の設定。https://developer.mozilla.org/ja/docs/Web/CSS/outline*/
+    font-size:100%;
+    /*font-size...文字サイズ設定。100%=1em=1rem=16px=12pt。https://www.eyesofc.co.jp/webeyes/category/homepage/255/*/
+    vertical-align:baseline;
+    /*vertical-align...文字以外の記号がどの位置に配置されるのかを決める。https://developer.mozilla.org/ja/docs/Web/CSS/vertical-align*/
+    background: transparent;
+    /*background...背景に関する情報を一括で指定。https://developer.mozilla.org/ja/docs/Web/CSS/background*/
+    box-sizing: border-box;
+    /*親コンテナの中の子供コンテナのサイズについて。border-boxで親にピッタリになる。https://developer.mozilla.org/ja/docs/Web/CSS/box-sizing*/
+}
+
+body {
+    line-height:1;
+    /*行の間隔を(正しくは行ボックスの高さ)を設定。1で詰め詰め。1未満で重なる。*/
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display:block;
+    /*要素を何として扱うかを定めたもの。article~sectionはblock要素として扱われる。*/
+}
+
+li {
+    list-style:none;
+    /*リストに使われる点について。https://developer.mozilla.org/ja/docs/Web/CSS/list-style*/
+}
+
+blockquote/*内包する要素の文字列が引用文であることを示す*/, q {
+    quotes:none;
+    /*引用符について。https://developer.mozilla.org/ja/docs/Web/CSS/quotes*/
+}
+
+blockquote:before,blockquote:after,
+q:before, q:after /*:befreや:afterをつけると、そのブロックの前に何かを入れることができる*/{
+    content:'';
+    content:none;
+    /*引用符を''にしてから無くす*/
+}
+
+a {
+    margin:0;
+    padding:0;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+ins/*文章に追加されたテキスト*/ {
+    background-color:#ff9;
+}
+
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;/*フォントの太さ(正確には重さ)を設定。*/
+}
+
+del /*削除済み文字*/{
+    text-decoration:  line-through; /*文字への装飾を横線一本を重ねるものにする*/
+}
+
+abbr[title]/*略語[定義]*/, dfn[title]/*用語[定義]*/{
+    border-bottom:1px dotted; /*境界線下側に1pxのドットを敷く*/
+    border-spacing: 0; /*隣り合うセルとの間隔を0にする*/
+}
+
+table {
+    border-collapse: collapse;/*セルの境界を共有*/
+    border-spacing:0;
+}
+
+hr /*段落ごとの区切り線*/{
+    display:block;
+    height: 1px;
+    border:0;
+    border-top:1px solid #cccccc;
+    margin: 1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}

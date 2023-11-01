@@ -1,0 +1,50 @@
+header {
+    color: red;
+}
+
+p ,li {
+    color: green;
+}
+
+li {
+    list-style-type: none;
+}
+
+li.special,
+span.special  {
+    color: orange;
+    front-weight: bold
+}
+
+li em {
+    color: rebeccapurple;
+}
+
+/*header + section {
+    font-size: 200%;
+}*/
+
+a:link {
+    color: pink;
+}
+a:hover{
+    text-decoration: none;
+}
+a:visited{
+    color: green;
+}
+
+/*section内のp要素のspan要素に焦点を当てるとき*/
+section p span.special {
+    color: yellowgreen;
+}
+/*<h1>要素の直後のul要素のその直後にくるp要素に焦点を当てる時*/
+h1 + ul + p {
+    color: turquoise;
+}
+/*section内のh1要素の直後のclass="special"のp要素に焦点を当てる時*/
+section h1 + span .special{
+    color: yellow
+    background-color: black;
+    padding: 5px;
+}
